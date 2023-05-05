@@ -5,10 +5,10 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     # Index
-    path('', views.index, name="index"),
+    #path('', views.index, name="index"),
 
     # Pages
-    path('pages/dashboard/', views.dashboard, name="dashboard"),
+    path('', views.dashboard, name="dashboard"),
     path('pages/transaction/', views.transaction, name="transaction"),
     path('pages/settings/', views.settings, name="settings"),
 

@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+{{ form.search_query|attr:"type:search" }}
+<div class="row justify-content-center">
+
+    <div class="col-8">
+        <p>Nom {{ object.nom }} </p>
+        <h1>
+            {{ object.prenom }}
+        </h1>
+        <h2>
+            Tel
+        </h2>
+        <p>
+            {{ object.tel }}
+        </p>
+        <div>
+            <a class='btn btn-success' href="{% url 'emp_upd' object.pk %}">Edit</a>
+            <a class='btn btn-danger' href="{% url 'emp_del' object.pk %}">Delete</a>
+            <a class='btn btn-primary' href="{% url 'list' %}">Back to Crud List</a>
+        </div>
+        
+    </div>
+    </div>
+
+
+{% endblock content %}
